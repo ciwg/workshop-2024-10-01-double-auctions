@@ -28,43 +28,25 @@ Community Systems Working Group
 
 ---
 
-# Example of a Bid Order in Ledger-CLI Format
+# Example of a Bid Order 
 
 **I promise to pay $5 each for 100 units of XYZ.**
 - This means you are committing to spending a total of $500 to buy 100 units of XYZ if your bid is accepted by someone else.
 
 ```
-2024/10/01 (PENDING) Buy 100 units of XYZ at $50 each
-    Assets:Margin       $500.00
-    Assets:Cash          -$500.00
+BID 100 XYZ @5.00 USD
 ```
-
-- **Margin**:
-  - **What is Margin?**
-    - Margin is the collateral or funds you set aside to support your bid. It ensures that you have sufficient resources to follow through if your bid is successful.
-  
-- **Understanding the Margin Entry**:
-  - In the transaction above, $500 is moved from your **Assets:Cash** account to your **Assets:Margin** account. This action reserves the funds, ensuring they are available to complete the purchase if your bid is matched.
 
 ---
 
-# Example of an Ask Order in Ledger-CLI Format
+# Example of an Ask Order
 
 **I promise to sell 50 units of XYZ at $10 each.**
 - This means you are offering to sell a total of 50 units of XYZ for $10 each, expecting a total return of $500 if your ask is accepted.
 
 ```
-2024/10/01 (PENDING) Sell 50 units of XYZ at $10 each
-    Assets:Inventory:-50 XYZ
-    Income:Sales       $500.00
+ASK 50 XYZ @10.00 USD
 ```
-
-- **Inventory**:
-  - **What is Inventory?**
-    - Inventory here represents your stock of the item you are willing to sell.
-  
-- **Understanding the Inventory Entry**:
-  - In the transaction above, 50 units are moved out from your **Assets:Inventory** account, and $500 is moved into your **Income:Sales** account. This action signifies the sale, ensuring your inventory and revenue are accurately represented.
 
 ---
 
@@ -74,7 +56,15 @@ Community Systems Working Group
   - A real-time, continuously updated list of buy and sell orders in the market.
   - Contains:
     - **Buy Orders (Bids)**: Listed from highest to lowest price.
+      - Example Bids:
+        - BID 100 XYZ @5.00 USD
+        - BID 200 XYZ @4.50 USD
+        - BID 150 XYZ @4.00 USD
     - **Sell Orders (Asks)**: Listed from lowest to highest price.
+      - Example Asks:
+        - ASK 120 XYZ @6.00 USD
+        - ASK 100 XYZ @6.50 USD
+        - ASK 200 XYZ @7.00 USD
   - **Purpose**: To display current supply and demand, facilitating transparency and price discovery.
 
 ---

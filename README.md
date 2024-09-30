@@ -54,7 +54,15 @@ ASK 50 XYZ @10.00 USD
   - A real-time, continuously updated list of buy and sell orders in the market.
   - Contains:
     - **Buy Orders (Bids)**: Listed from highest to lowest price.
+      - Example Bids:
+        - BID 100 XYZ @5.00 USD
+        - BID 200 XYZ @4.50 USD
+        - BID 150 XYZ @4.00 USD
     - **Sell Orders (Asks)**: Listed from lowest to highest price.
+      - Example Asks:
+        - ASK 120 XYZ @6.00 USD
+        - ASK 100 XYZ @6.50 USD
+        - ASK 200 XYZ @7.00 USD
   - **Purpose**: To display current supply and demand, facilitating transparency and price discovery.
 
 ---

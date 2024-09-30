@@ -39,7 +39,10 @@ Community Systems Working Group
   - **Description**: Indicates the transaction is a pending bid limit order.
   - **Ledger Accounts**:
     - **Assets:Margin**: Credits $5000.00 to margin.
+      - **Credit**: In accounting, a credit entry increases liabilities or equity accounts or decreases asset accounts.
+      - **Margin**: The collateral or funds required to open or maintain a trading position.
     - **Assets:Cash**: Debits $5000.00 from cash.
+      - **Debit**: In accounting, a debit entry increases asset or expense accounts or decreases liabilities or equity accounts.
 
 ---
 
@@ -120,6 +123,3 @@ Community Systems Working Group
   - Example: Local communities trading solar energy credits.
 
 ---
-
-```
-EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md

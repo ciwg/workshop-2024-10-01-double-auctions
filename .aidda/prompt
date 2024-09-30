@@ -15,10 +15,17 @@ Out: README.md
 
 revise the slide deck to include:
 
+
 - slide showing example of a bid order in ledger-cli format
+   - the slide should start with a plain-english sentence that is
+     equivalent to the ledger-cli transaction
    - the ledger-cli transaction for a pending bid limit order 
    should credit cash and debit margin
    - the slide should explain the meaning of the terms "credit" and "debit"
+   - the slide should explin what's going on with the debit and creit
+     entries in the ledger-cli transaction
    - the slide should explain the meaning of the term "margin"
+   - the slide should explain what's going on with the margin entry in the
+     ledger-cli transaction
 
 

@@ -1,20 +1,23 @@
-
-File: /home/stevegt/lab/cswg/workshop-2024-09-31-double-auctions/README.md
+File: /home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
 ```markdown
 # Double Auctions: An Introduction
 
+Community Systems Working Group
+
+2024-09-31
+
 ---
 
-## What is a Double Auction?
+# What is a Double Auction?
 
 - **Definition**: A double auction is a market mechanism where multiple buyers and sellers submit bids and asks simultaneously.
-- **Bids**: Offers to buy a specific quantity of an asset at a given price
-- **Asks**: Offers to sell a specific quantity of an asset at a given price
-- **Objective**: To find a match between buyer and seller orders to facilitate trade
+- **Bid**: An offer to buy a specific quantity of an asset at a given price in a given currency
+- **Ask**: An offer to sell a specific quantity of an asset at a given price in a given currency
+- **Objective**: To discover the equilibrium price at which the quantity of goods demanded equals the quantity supplied.
 
 ---
 
-## What is a Bid or Ask Order?
+# What is a Bid or Ask Order?
 
 - **Bid Order**:
   - A proposal to buy a certain amount of an asset at a specified price.
@@ -25,7 +28,7 @@ File: /home/stevegt/lab/cswg/workshop-2024-09-31-double-auctions/README.md
 
 ---
 
-## What is an Order Book?
+# What is an Order Book?
 
 - **Order Book**:
   - A real-time, continuously updated list of buy and sell orders in the market.
@@ -36,7 +39,7 @@ File: /home/stevegt/lab/cswg/workshop-2024-09-31-double-auctions/README.md
 
 ---
 
-## What is a Matching Engine?
+# What is a Matching Engine?
 
 - **Matching Engine**:
   - A system component that matches buy and sell orders from the order book.
@@ -47,7 +50,7 @@ File: /home/stevegt/lab/cswg/workshop-2024-09-31-double-auctions/README.md
 
 ---
 
-## How Double Auctions Are Used in Financial Markets
+# How Double Auctions Are Used in Financial Markets
 
 - **Stock Exchanges**:
   - Facilitate trading of financial instruments (e.g., stocks, bonds).
@@ -58,22 +61,29 @@ File: /home/stevegt/lab/cswg/workshop-2024-09-31-double-auctions/README.md
 
 ---
 
-## Tracking Multiple Local Microcurrencies and Resource Allocation
+# How Double Auctions Are Used in Currency Exchange Trades
 
-- **Microcurrencies**:
-  - Digital tokens used within localized, decentralized systems.
-  - Help quantify and manage local resources and services.
-- **Resource Allocation**:
-  - Double auctions can optimize the distribution of resources by matching supply and demand efficiently.
-  - Example: Local communities trading solar energy credits.
+- **Currency Exchanges**:
+  - Double auctions can facilitate the trading of various currencies.
+  - Participants submit bids and asks in different currencies, enabling efficient currency exchange through transparent and competitive pricing.
+  - Example: Traders exchanging USD for EUR or other fiat or cryptocurrencies.
 
 ---
 
-## Implementing Double Auctions in a Decentralized System
+# How Double Auctions Work in Peer-to-Peer Markets
 
-- **Smart Contracts**:
-  - Automated and enforceable scripts on blockchain platforms.
-  - Can implement double auction mechanisms for transparent and tamper-proof operations.
+- **Decentralized Markets**:
+  - Peer-to-peer platforms where users can trade directly without intermediaries.
+  - Double auctions help match buyers and sellers in these decentralized environments.
+- **Advantages**:
+  - Increased Market Efficiency: Direct matching leads to efficient price discovery.
+  - Reduced Transaction Costs: Elimination of intermediaries reduces costs for participants.
+  - Enhanced Privacy and Security: Use of cryptographic protocols ensures privacy and security.
+  
+---
+
+# Implementing Double Auctions in a Decentralized System
+
 - **Decentralized Matching Engine**:
   - Peer-to-peer network nodes work together to match buy and sell orders.
   - Ensures robustness and removes single points of failure.
@@ -84,5 +94,18 @@ File: /home/stevegt/lab/cswg/workshop-2024-09-31-double-auctions/README.md
   - Enhanced trust among participants
 
 ---
-EOF_/home/stevegt/lab/cswg/workshop-2024-09-31-double-auctions/README.md
+
+# Tracking Multiple Local Microcurrencies and Resource Allocation
+
+- **Microcurrencies**:
+  - Digital tokens used within localized, decentralized systems.
+  - Help quantify and manage local resources and services.
+- **Resource Allocation**:
+  - Double auctions can optimize the distribution of resources by matching supply and demand efficiently.
+  - Example: Local communities trading solar energy credits.
+
+---
+
+```
+EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
 ```

@@ -14,7 +14,7 @@ In: README.md
 Out: README.md
 
 revise the slide deck to include:
-- how double auctions are used in currency exchange trades
-- how double auctions work in peer-to-peer markets
+
+- slide showing example of a bid order in ledger-cli format
 
 

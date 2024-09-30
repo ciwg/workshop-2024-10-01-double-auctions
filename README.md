@@ -2,15 +2,15 @@
 
 Community Systems Working Group
 
-2024-09-31
+2024-10-01
 
 ---
 
 # What is a Double Auction?
 
 - **Definition**: A double auction is a market mechanism where multiple buyers and sellers submit bids and asks simultaneously.
-- **Bid**: An offer to buy a specific quantity of an asset at a given price in a given currency
-- **Ask**: An offer to sell a specific quantity of an asset at a given price in a given currency
+- **Bid**: An offer to buy a specific quantity of an asset at a given price in a given currency.
+- **Ask**: An offer to sell a specific quantity of an asset at a given price in a given currency.
 - **Objective**: To discover the equilibrium price at which the quantity of goods demanded equals the quantity supplied.
 
 ---
@@ -29,17 +29,17 @@ Community Systems Working Group
 # Example of a Bid Order in Ledger-CLI Format
 
 ```
-2024/10/01 Buy 100 units of ASSET at $50 each
-    Expenses:Investments   100 ASSET @@ $50.00
-    Assets:Cash           -$5000.00
+2024/10/01 (PENDING) Buy 100 units of ASSET at $50 each
+    Assets:Margin       $5000.00
+    Assets:Cash          -$5000.00
 ```
 
 - **Explanation**:
   - **Date**: Specifies the date of the transaction.
-  - **Description**: A brief explanation of the transaction.
+  - **Description**: Indicates the transaction is a pending bid limit order.
   - **Ledger Accounts**:
-    - **Expenses:Investments**: Increases by 100 units of 'ASSET' priced at $50.00 each.
-    - **Assets:Cash**: Decreases by the total cost, $5000.00.
+    - **Assets:Margin**: Credits $5000.00 to margin.
+    - **Assets:Cash**: Debits $5000.00 from cash.
 
 ---
 
@@ -121,3 +121,5 @@ Community Systems Working Group
 
 ---
 
+```
+EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md

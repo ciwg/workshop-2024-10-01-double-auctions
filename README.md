@@ -52,13 +52,16 @@ ASK 50 XYZ @10.00 USD
 
 - **Order Book**:
   - A real-time, continuously updated list of buy and sell orders in the market.
-  - Example Orders (Highest to Lowest Price):
-    - BID 100 XYZ @5.00 USD
-    - ASK 50 XYZ @10.00 USD
-    - BID 200 XYZ @4.50 USD
-    - ASK 20 XYZ @9.00 USD
-    - BID 150 XYZ @4.00 USD
-    - ASK 100 XYZ @6.50 USD
+
+  | Type | Quantity | Asset | Price (USD) |
+  |---|---|---|---|
+  | ASK | 50 | XYZ | 10.00 |
+  | ASK | 20 | XYZ | 9.00 |
+  | ASK | 100 | XYZ | 6.50 |
+  | BID | 100 | XYZ | 5.00 |
+  | BID | 200 | XYZ | 4.50 |
+  | BID | 150 | XYZ | 4.00 |
+
   - **Purpose**: To display current supply and demand, facilitating transparency and price discovery.
 
 ---

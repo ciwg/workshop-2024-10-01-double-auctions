@@ -10,16 +10,11 @@ Sysmsg:
    microstructure, and are implementing a decentralized computing
    system that uses double auctions to track multiple local
    microcurrencies and allocate resources.
-In: 
+In: README.md
 Out: README.md
 
-write a slide deck about how double auctions work, including:
-- what a double auction is
-- what a bid or ask order is
-- what an order book is
-- what a matching engine is
-- how double auctions are used in financial markets
-- how double auctions can be used to track multiple local microcurrencies and allocate resources
-- how double auctions can be implemented in a decentralized computing system
+revise the slide deck to include:
+- how double auctions are used in currency exchange trades
+- how double auctions work in peer-to-peer markets
 
 

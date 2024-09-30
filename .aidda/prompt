@@ -20,12 +20,7 @@ revise the slide deck to include:
 
 - slide showing example of a bid order in ledger-cli format
    - the language should be friendly and accessible
-   - the slide should start with a plain-english sentence that is
-     equivalent to the ledger-cli transaction.  the sentence should
-     be worded as a promise: "I promise to pay $100 for 10 shares of XYZ"
-   - the slide should explain the meaning of the terms "credit" and "debit"
-   - the slide should explin what's going on with the debit and creit
-     entries in the ledger-cli transaction
+   - remove the debit and credit explanations
    - the slide should explain the meaning of the term "margin"
    - the slide should explain what's going on with the margin entry in the
      ledger-cli transaction

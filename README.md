@@ -19,39 +19,30 @@ Community Systems Working Group
 
 - **Bid Order**:
   - A proposal to buy a certain amount of an asset at a specified price.
-  - Example: Buy 100 units at $50 each.
+  - Example: Buy 100 units at $5 each.
 - **Ask Order**:
   - A proposal to sell a certain amount of an asset at a specified price.
-  - Example: Sell 100 units at $55 each.
+  - Example: Sell 100 units at $6 each.
 
 ---
 
 # Example of a Bid Order in Ledger-CLI Format
 
-**I promise to pay $50 each for 100 units of XYZ.**
-- This statement means you are committing to spending $5,000 to buy 100 units of XYZ if your bid is accepted by anyone else.
+**I promise to pay $5 each for 100 units of XYZ.**
+- This means you are committing to spending a total of $500 to buy 100 units of XYZ if your bid is accepted by someone else.
 
 ```
 2024/10/01 (PENDING) Buy 100 units of XYZ at $50 each
-    Assets:Margin       $5000.00
-    Assets:Cash          -$5000.00
+    Assets:Margin       $500.00
+    Assets:Cash          -$500.00
 ```
 
-  - **Ledger Accounts**:
-    - **Assets:Cash**:
-      - **Debit**: $5,000 is taken out of your cash account.
-      - **Meaning**: A debit entry in this context decreases your available cash by $5,000, reserving the funds for the bid.
-    - **Assets:Margin**:
-      - **Credit**: $5,000 is added to your margin account.
-      - **Meaning**: A credit entry increases your margin, which serves as collateral to support your bid. This ensures that the necessary funds are set aside in case the bid is executed.
+- **Margin**:
+  - **What is Margin?**
+    - Margin is the collateral or funds you set aside to support your bid. It ensures that you have sufficient resources to follow through if your bid is successful.
   
-  - **Credit and Debit Explained**:
-    - **Credit**: In accounting, a credit entry typically represents an increase in liabilities or equity, or a decrease in assets. Here, crediting the margin account means you're increasing your collateral.
-    - **Debit**: A debit entry usually signifies an increase in assets or expenses, or a decrease in liabilities or equity. Debiting the cash account decreases your available funds, reserving them for the potential purchase.
-  
-  - **Margin Explained**:
-    - **Margin**: This is the collateral or funds required to open or maintain a trading position. It ensures that participants have sufficient resources to back their bids or asks.
-    - **Margin Entry in Transaction**: By crediting the margin account, you're allocating the $5,000 as collateral to support your bid. This guarantees that the funds are reserved and available if your bid is matched and executed.
+- **Understanding the Margin Entry**:
+  - In the transaction above, $500 is moved from your **Assets:Cash** account to your **Assets:Margin** account. This action reserves the funds, ensuring they are available to complete the purchase if your bid is matched.
 
 ---
 

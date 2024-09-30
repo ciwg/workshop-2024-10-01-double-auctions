@@ -9,7 +9,9 @@ Sysmsg:
    researchers who are not yet familiar with financial markets
    microstructure, and are implementing a decentralized computing
    system that uses double auctions to track multiple local
-   microcurrencies and allocate resources.
+   microcurrencies and allocate resources. Please use friendly,
+   accessible language and examples to explain the concepts.  The
+   slides should be clear, concise, and engaging.  
 In: README.md
 Out: README.md
 
@@ -17,10 +19,10 @@ revise the slide deck to include:
 
 
 - slide showing example of a bid order in ledger-cli format
+   - the language should be friendly and accessible
    - the slide should start with a plain-english sentence that is
-     equivalent to the ledger-cli transaction
-   - the ledger-cli transaction for a pending bid limit order 
-   should credit cash and debit margin
+     equivalent to the ledger-cli transaction.  the sentence should
+     be worded as a promise: "I promise to pay $100 for 10 shares of XYZ"
    - the slide should explain the meaning of the terms "credit" and "debit"
    - the slide should explin what's going on with the debit and creit
      entries in the ledger-cli transaction

@@ -28,6 +28,8 @@ Community Systems Working Group
 
 # Example of a Bid Order in Ledger-CLI Format
 
+A pending bid limit order to buy 100 units of an asset at $50 each is recorded by debiting cash and crediting margin.
+
 ```
 2024/10/01 (PENDING) Buy 100 units of ASSET at $50 each
     Assets:Margin       $5000.00
@@ -41,8 +43,10 @@ Community Systems Working Group
     - **Assets:Margin**: Credits $5000.00 to margin.
       - **Credit**: In accounting, a credit entry increases liabilities or equity accounts or decreases asset accounts.
       - **Margin**: The collateral or funds required to open or maintain a trading position.
+      - **Margin Entry Explanation**: Crediting margin allocates the necessary collateral to support the pending bid, ensuring that sufficient funds are reserved for the potential purchase.
     - **Assets:Cash**: Debits $5000.00 from cash.
       - **Debit**: In accounting, a debit entry increases asset or expense accounts or decreases liabilities or equity accounts.
+      - **Cash Entry Explanation**: Debiting cash reduces the available liquid funds, reserving the amount needed to fulfill the bid if it gets executed.
 
 ---
 

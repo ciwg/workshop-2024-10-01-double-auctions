@@ -24,7 +24,6 @@ They are able to do this across national borders, languages, and
 cultures, often reallocating resources within milliseconds of an
 event.
 
-
 ---
 
 # Double Auctions Govern Governments
@@ -109,7 +108,7 @@ ASK 50 XYZ @10.00 USD
 
 # Order Book
 
-Buyers and sellers records each other's bids and asks in an **order book**.  This gives them a sense of the market's supply and demand.
+Buyers and sellers record each other's bids and asks in an **order book**.  This gives them a sense of the market's supply and demand.
 
 Example of a simplified order book:
 
@@ -121,7 +120,6 @@ Example of a simplified order book:
   | BID | 100 | XYZ | 5.00 |
   | BID | 200 | XYZ | 4.50 |
   | BID | 150 | XYZ | 4.00 |
-
 
 ---
 
@@ -141,22 +139,83 @@ Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
   | BID | 200 | XYZ | 4.50 |
   | BID | 150 | XYZ | 4.00 |
 
-
 ---
 
 # Matching Engine
 
 In an electronic trading system, the **matching engine** is a component that matches buy and sell orders from the order book.  
 
-Example of a matching engine in action:
+---
 
-- A buyer submits a bid for 100 units of XYZ at $5 each.
-- A seller submits an ask for 50 units of XYZ at $6.50 each.
-- The matching engine does nothing -- the bid-ask spread is $1.50.
-- Another seller submits an ask for 100 units of XYZ at $5 each.
-- The matching engine pairs the buyer and new seller, executing a trade for 50 units of XYZ at $5 each.
+# Matching Engine in Action: Step 1
 
-Let's take that one step at a time on the next slides.
+Here is our starting order book -- the bid-ask spread is $4.50 (9.00 - 4.50), so no trades are happening:
+
+  | Type | Quantity | Asset | Price (USD) |
+  |---|---|---|---|
+  | ASK | 50 | XYZ | 10.00 |
+  | ASK | 20 | XYZ | 9.00 |
+  | --- | --- | --- | --- |
+  | BID | 200 | XYZ | 4.50 |
+  | BID | 150 | XYZ | 4.00 |
+
+A buyer submits a bid for 100 units of XYZ at $5 each. The bid-ask spread is now $4 (9.00 - 5.00), still no trade:
+
+  | Type | Quantity | Asset | Price (USD) |
+  |---|---|---|---|
+  | ASK | 50 | XYZ | 10.00 |
+  | ASK | 20 | XYZ | 9.00 |
+  | --- | --- | --- | --- |
+  | BID | 100 | XYZ | 5.00 |
+  | BID | 200 | XYZ | 4.50 |
+  | BID | 150 | XYZ | 4.00 |
+
+---
+
+# Matching Engine in Action: Step 2
+
+A seller submits an ask for 50 units of XYZ at $6.50 each. The bid-ask spread is now $1.50, still no trade:
+
+  | Type | Quantity | Asset | Price (USD) |
+  |---|---|---|---|
+  | ASK | 50 | XYZ | 10.00 |
+  | ASK | 20 | XYZ | 9.00 |
+  | ASK | 50 | XYZ | 6.50 |
+  | --- | --- | --- | --- |
+  | BID | 100 | XYZ | 5.00 |
+  | BID | 200 | XYZ | 4.50 |
+  | BID | 150 | XYZ | 4.00 |
+
+---
+
+# Matching Engine in Action: Step 3
+
+Another seller submits an ask for 100 units of XYZ at $5 each. The matching engine notices that the bid-ask spread is now $0:
+
+  | Type | Quantity | Asset | Price (USD) |
+  |---|---|---|---|
+  | ASK | 50 | XYZ | 10.00 |
+  | ASK | 20 | XYZ | 9.00 |
+  | ASK | 50 | XYZ | 6.50 |
+  | ASK | 100 | XYZ | 5.00 |
+  | --- | --- | --- | --- |
+  | BID | 50 | XYZ | 5.00 |
+  | BID | 200 | XYZ | 4.50 |
+  | BID | 150 | XYZ | 4.00 |
+
+...and executes a trade between the buyer and the seller at $5 each
+for 50 units of XYZ, removing them from the order book.  The remaining
+50 units of the seller's ask remain in the book:
+
+  | Type | Quantity | Asset | Price (USD) |
+  |---|---|---|---|
+  | ASK | 50 | XYZ | 10.00 |
+  | ASK | 20 | XYZ | 9.00 |
+  | ASK | 50 | XYZ | 6.50 |
+  | ASK | 50 | XYZ | 5.00 |
+  | --- | --- | --- | --- |
+  | BID | 200 | XYZ | 4.50 |
+  | BID | 150 | XYZ | 4.00 |
 
 ---
 

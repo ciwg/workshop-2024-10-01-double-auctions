@@ -15,10 +15,19 @@ Sysmsg:
 In: README.md
 Out: README.md
 
-revise the slide deck to include:
+revise the slide deck:
 
+Reformat all of the order book examples by moving the Price data into
+a Bid or Ask column, and removing the Asset and Type columns.  Here is an example
+of the revised format:
 
-- add several slides showing the matching engine in action, with a
-  copy of the order book on each slide
+  | Quantity | Bid  | Ask   |
+  |----------|------|-------|
+  | 50       |      | 10.00 |
+  | 20       |      | 9.00  |
+  | 100      |      | 6.50  |
+  | 100      | 5.00 |       |
+  | 200      | 4.50 |       |
+  | 150      | 4.00 |       |
 
 

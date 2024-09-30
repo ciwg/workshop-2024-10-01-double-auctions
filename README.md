@@ -66,6 +66,27 @@ ASK 50 XYZ @10.00 USD
 
 ---
 
+# Bid-Ask Spread
+
+- **Definition**: The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
+- **Significance**: 
+  - Indicates market liquidity: A smaller spread often means higher liquidity, while a larger spread indicates lower liquidity.
+  - Affects trading costs: A larger spread can increase the cost of trading for participants.
+
+  | Type | Quantity | Asset | Price (USD) |
+  |---|---|---|---|
+  | ASK | 50 | XYZ | 10.00 |
+  | ASK | 20 | XYZ | 9.00 |
+  | ASK | 100 | XYZ | 6.50 |
+  | --- | --- | --- | --- |
+  | BID | 100 | XYZ | 5.00 |
+  | BID | 200 | XYZ | 4.50 |
+  | BID | 150 | XYZ | 4.00 |
+
+  - Example: In the table above, the bid-ask spread for asset XYZ is $1.50 (6.50 - 5.00).
+
+---
+
 # What is a Matching Engine?
 
 - **Matching Engine**:

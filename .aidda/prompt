@@ -18,7 +18,6 @@ Out: README.md
 revise the slide deck to include:
 
 
-- add a slide after the orderbook explaining the concept of a "bid ask spread" and how it relates to the orderbook
-   - show the order book with a bid ask spread
+- add a slide explaining "limit orders" and how they work in a double auction
 
 

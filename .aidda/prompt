@@ -18,7 +18,6 @@ Out: README.md
 revise the slide deck to include:
 
 
-- slide showing example of an ask order in ledger-cli format
-   - the transaction should credit inventory, debit margin
+- add the example BID and ASK orders to the order book slide
 
 

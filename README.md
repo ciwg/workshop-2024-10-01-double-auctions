@@ -8,14 +8,69 @@ Community Systems Working Group
 
 # What is a Double Auction?
 
-- **Definition**: A double auction is a market mechanism where multiple buyers and sellers submit bids and asks simultaneously.
-- **Bid**: An offer to buy a specific quantity of an asset at a given price in a given currency.
-- **Ask**: An offer to sell a specific quantity of an asset at a given price in a given currency.
-- **Objective**: To discover the equilibrium price at which the quantity of goods demanded equals the quantity supplied.
+A double auction is a market mechanism where buyers and sellers declare orders to buy or sell an asset.
+
+- **Example**: A street vendor and a tourist haggling over the price of a souvenir.
 
 ---
 
-# What is a Bid or Ask Order?
+# Why double auctions matter
+
+Double auctions perform **price discovery** -- the process of deciding a reasonable value for an asset.
+
+Electronic double auctions are a modern global forum.  They
+communicate need and availability of goods and services worldwide.
+They are able to do this across national borders, languages, and
+cultures, often reallocating resources within milliseconds of an
+event.
+
+
+---
+
+# Double Auctions Govern Governments
+
+A government's ability to function is ultimately limited by what the
+bond market (a double auction) is willing to lend to the government's
+treasury.
+
+Bond traders lend money to a government by buying government bonds. For example:
+- The US Treasury might wish to sell a bond that is worth $1000 in 10 years.  
+- The US Treasury might try to sell this bond for $900 today.
+- Whether the sale is successful depends on whether anyone is
+  willing to buy the bond for $900 and accept the risk that the
+  government might not repay the bond 10 years from now.
+
+_"You mean to tell me that the success of the program and my reelection hinges on the Federal Reserve and a bunch of &#^%@ bond traders?" -- Bill Clinton_
+
+- Whether between individuals or nations, double auctions are a key
+  mechanism for decentralized governance.
+
+---
+
+# Key Features of Double Auctions
+
+- **Buyers** submit orders to buy an asset
+- **Sellers** submit orders to sell an asset
+- A **Matching** process pairs buy and sell orders to **execute** trades.
+
+---
+
+# Limit Orders 
+
+Double auctions are based on **limit orders**.
+
+A limit order is an order to buy or sell an asset at a specified price or better.
+
+- **Buy Limit Order**: Sets the maximum price at which you're willing to buy.
+  - Also known as a "bid" or "buy"
+  - We'll use "bid" in this presentation.
+- **Sell Limit Order**: Sets the minimum price at which you're willing to sell.
+  - Also known as an "ask", "offer", or "sell"
+  - We'll use "ask" in this presentation.
+
+---
+
+# Limit Order examples
 
 - **Bid Order**:
   - A proposal to buy a certain amount of an asset at a specified price.
@@ -31,6 +86,8 @@ Community Systems Working Group
 **I promise to pay $5 each for 100 units of XYZ.**
 - This means you are committing to spending a total of $500 to buy 100 units of XYZ if your bid is accepted by someone else.
 
+In traders' shorthand, this might be written as:
+
 ```
 BID 100 XYZ @5.00 USD
 ```
@@ -42,16 +99,19 @@ BID 100 XYZ @5.00 USD
 **I promise to sell 50 units of XYZ at $10 each.**
 - This means you are offering to sell a total of 50 units of XYZ for $10 each, expecting a total return of $500 if your ask is accepted.
 
+In shorthand:
+
 ```
 ASK 50 XYZ @10.00 USD
 ```
 
 ---
 
-# What is an Order Book?
+# Order Book
 
-- **Order Book**:
-  - A real-time, continuously updated list of buy and sell orders in the market.
+Buyers and sellers records each other's bids and asks in an **order book**.  This gives them a sense of the market's supply and demand.
+
+Example of a simplified order book:
 
   | Type | Quantity | Asset | Price (USD) |
   |---|---|---|---|
@@ -62,16 +122,14 @@ ASK 50 XYZ @10.00 USD
   | BID | 200 | XYZ | 4.50 |
   | BID | 150 | XYZ | 4.00 |
 
-  - **Purpose**: To display current supply and demand, facilitating transparency and price discovery.
 
 ---
 
 # Bid-Ask Spread
 
-- **Definition**: The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
-- **Significance**: 
-  - Indicates market liquidity: A smaller spread often means higher liquidity, while a larger spread indicates lower liquidity.
-  - Affects trading costs: A larger spread can increase the cost of trading for participants.
+The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
+
+Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
 
   | Type | Quantity | Asset | Price (USD) |
   |---|---|---|---|
@@ -83,18 +141,22 @@ ASK 50 XYZ @10.00 USD
   | BID | 200 | XYZ | 4.50 |
   | BID | 150 | XYZ | 4.00 |
 
-  - Example: In the table above, the bid-ask spread for asset XYZ is $1.50 (6.50 - 5.00).
 
 ---
 
-# What is a Matching Engine?
+# Matching Engine
 
-- **Matching Engine**:
-  - A system component that matches buy and sell orders from the order book.
-  - **Algorithm**: Matches highest bid with the lowest ask to execute a trade.
-  - **Functions**:
-    - Ensures trades are executed fairly and efficiently.
-    - Updates the order book in real-time.
+In an electronic trading system, the **matching engine** is a component that matches buy and sell orders from the order book.  
+
+Example of a matching engine in action:
+
+- A buyer submits a bid for 100 units of XYZ at $5 each.
+- A seller submits an ask for 50 units of XYZ at $6.50 each.
+- The matching engine does nothing -- the bid-ask spread is $1.50.
+- Another seller submits an ask for 100 units of XYZ at $5 each.
+- The matching engine pairs the buyer and new seller, executing a trade for 50 units of XYZ at $5 each.
+
+Let's take that one step at a time on the next slides.
 
 ---
 

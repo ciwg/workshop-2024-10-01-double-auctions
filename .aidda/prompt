@@ -18,6 +18,7 @@ Out: README.md
 revise the slide deck to include:
 
 
-- add a slide explaining "limit orders" and how they work in a double auction
+- add several slides showing the matching engine in action, with a
+  copy of the order book on each slide
 
 

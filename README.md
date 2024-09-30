@@ -26,6 +26,23 @@ Community Systems Working Group
 
 ---
 
+# Example of a Bid Order in Ledger-CLI Format
+
+```
+2024/10/01 Buy 100 units of ASSET at $50 each
+    Expenses:Investments   100 ASSET @@ $50.00
+    Assets:Cash           -$5000.00
+```
+
+- **Explanation**:
+  - **Date**: Specifies the date of the transaction.
+  - **Description**: A brief explanation of the transaction.
+  - **Ledger Accounts**:
+    - **Expenses:Investments**: Increases by 100 units of 'ASSET' priced at $50.00 each.
+    - **Assets:Cash**: Decreases by the total cost, $5000.00.
+
+---
+
 # What is an Order Book?
 
 - **Order Book**:

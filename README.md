@@ -46,6 +46,26 @@ Community Systems Working Group
 
 ---
 
+# Example of an Ask Order in Ledger-CLI Format
+
+**I promise to sell 50 units of XYZ at $10 each.**
+- This means you are offering to sell a total of 50 units of XYZ for $10 each, expecting a total return of $500 if your ask is accepted.
+
+```
+2024/10/01 (PENDING) Sell 50 units of XYZ at $10 each
+    Assets:Inventory:-50 XYZ
+    Income:Sales       $500.00
+```
+
+- **Inventory**:
+  - **What is Inventory?**
+    - Inventory here represents your stock of the item you are willing to sell.
+  
+- **Understanding the Inventory Entry**:
+  - In the transaction above, 50 units are moved out from your **Assets:Inventory** account, and $500 is moved into your **Income:Sales** account. This action signifies the sale, ensuring your inventory and revenue are accurately represented.
+
+---
+
 # What is an Order Book?
 
 - **Order Book**:

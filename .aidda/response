@@ -1,4 +1,3 @@
-File: /home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
 ```markdown
 # Double Auctions: An Introduction
 
@@ -116,21 +115,6 @@ Example of a simplified order book:
 
 ---
 
-# Currency Exchange Order Book
-
-This is what an order book might look like for a currency exchange. Here traders are buying and selling euros (EUR) using US dollars (USD):
-
-  | Quantity EUR | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 1000         |         | 1.30    |
-  | 2000         |         | 1.25    |
-  | 1500         |         | 1.20    |
-  | 2000         | 1.10    |         |
-  | 3000         | 1.05    |         |
-  | 4000         | 1.00    |         |
-
----
-
 # Bid-Ask Spread
 
 The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
@@ -145,6 +129,25 @@ Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
   | 100          | 5.00    |         |
   | 200          | 4.50    |         |
   | 150          | 4.00    |         |
+
+---
+
+# Market Makers & Income from Bid-Ask Spread
+
+Market makers are participants that provide liquidity to the market by continuously posting bid and ask prices.
+
+- **Income from Bid-Ask Spread**:
+  - Market makers buy at the bid price and sell at the ask price.
+  - The difference (spread) is their profit.
+  
+  Example: 
+  - Buy 100 units at $5 each (total $500).
+  - Sell 100 units at $6 each (total $600).
+  - Profit: $100 ($600 - $500).
+
+- **Anyone can be a Market Maker**:
+  - As long as the spread is wide enough to cover costs and provide a profit.
+  - This includes transaction fees, risk of price movement, and holding costs.
 
 ---
 
@@ -235,6 +238,25 @@ BID 100 EUR @1.10 USD
 
 ---
 
+# Currency Exchange Order Book
+
+This is what an order book might look like for a currency exchange. Here traders are buying and selling euros (EUR) using US dollars (USD):
+
+  | Quantity EUR | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 1000         |         | 1.30    |
+  | 2000         |         | 1.25    |
+  | 1500         |         | 1.20    |
+  | 2000         | 1.10    |         |
+  | 3000         | 1.05    |         |
+  | 4000         | 1.00    |         |
+
+## Discussion:  Which Currency is worth more?
+
+In the above order book, which currency has higher value per unit, the USD or the EUR?
+
+---
+
 # How Double Auctions Work in Peer-to-Peer Markets
 
 - **Decentralized Markets**:
@@ -272,3 +294,4 @@ BID 100 EUR @1.10 USD
 ---
 ```
 EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
+```

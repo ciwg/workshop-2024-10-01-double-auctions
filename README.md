@@ -131,6 +131,25 @@ Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
 
 ---
 
+# Market Makers: Income from Bid-Ask Spread
+
+Market makers are participants that provide liquidity to the market by posting bid and ask prices.
+
+- **Income from Bid-Ask Spread**:
+  - Market makers buy at the bid price and sell at the ask price.
+  - The difference (spread) is their profit.
+  
+  Example: 
+  - Buy 100 units at $5 each (total $500).
+  - Sell 100 units at $6 each (total $600).
+  - Profit: $100 ($600 - $500).
+
+- **Anyone can be a Market Maker**:
+  - As long as the spread is wide enough to cover costs and provide a profit.
+  - Costs includes transaction fees, risk of price movement, and holding costs.
+
+---
+
 # Matching Engine
 
 In an electronic trading system, the **matching engine** is a component that matches buy and sell orders from the order book.  
@@ -272,3 +291,4 @@ In the above order book, which currency has higher value per unit, the USD or th
   - Example: Local communities trading solar energy credits.
 
 ---
+

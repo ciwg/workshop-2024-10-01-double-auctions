@@ -301,48 +301,72 @@ In most markets, **anyone can be a Market Maker**:
 
 ---
 
-# How Double Auctions Work in Peer-to-Peer Markets
-
-- **Decentralized Markets**:
-  - Peer-to-peer platforms where users can trade directly without intermediaries.
-  - Double auctions help match buyers and sellers in these decentralized environments.
-- **Advantages**:
-  - Increased Market Efficiency: Direct matching leads to efficient price discovery.
-  - Reduced Transaction Costs: Elimination of intermediaries reduces costs for participants.
-  - Enhanced Privacy and Security: Use of cryptographic protocols ensures privacy and security.
-  
----
-
 # Sidebar: Currency Exchange Booths
 
-- When you go to the currency exchange booth at the airport, you are using a **market order**, paying the spread.
+- When you trade with a currency exchange booth at an airport, you are using a **market order**, paying the spread.
+- The booth acts as a **market maker**.
 - The booth makes their income from the spread.
+
+# Example: 
+
+Let's look at an order book for a USD/MXN (US Dollar/Mexican Peso) exchange at an airport booth. The exchange rate midpoint is 19.69 with a 0.20 MXN spread.
+
+  | Trader | Quantity USD | Bid MXN | Ask MXN |
+  |--------|--------------|---------|---------|
+  | Booth  | 1000         |         | 19.79   |
+  | Booth  | 1000         | 19.59   |         |
+
+- The booth is both the buyer and seller (market maker).
+- You are buying or selling USD to the booth, in exchange for MXN.
+- If you sell USD to the booth, you get 19.59 MXN/USD.
+- If you buy USD from the booth, you pay 19.79 MXN/USD.
+- The booth's profit is the spread (0.20 MXN per USD).
+
+# Discussion: 
+
+- How much USD will you be left with if you exchange $1000 USD for MXN, and then exchange the MXN back to USD?
 
 ---
 
 # Implementing Double Auctions in a Decentralized System
 
-- **Decentralized Matching Engine**:
-  - Peer-to-peer network nodes work together to match buy and sell orders.
-  - Ensures robustness and removes single points of failure.
-- **Advantages**:
-  - Resilience
-  - Transparency
-  - Efficiency in resource distribution
-  - Enhanced trust among participants
+- Peer-to-peer network nodes work together to match buy and sell orders.
+- Ensures robustness and removes single points of failure.
+
+But making this work requires either:
+
+- Peers trusting each other to agree on the order book and matching trades.
+- A third-party matching engine that both peers trust.
+- A blockchain-based system that ensures trust and transparency via decentralized consensus.
+  - proof-of-work (e.g. Bitcoin), proof-of-stake (e.g. Ethereum), or other consensus mechanisms.
+- Some other mechanism: e.g. multi-party computation, zero-knowledge proofs.
 
 ---
 
-# Tracking Multiple Local Microcurrencies and Resource Allocation
+# Personal Currencies 
 
-- **Microcurrencies**:
-  - Digital tokens used within localized, decentralized systems.
-  - Help quantify and manage local resources and services.
-- **Resource Allocation**:
-  - Double auctions can optimize the distribution of resources by matching supply and demand efficiently.
-  - Example: Local communities trading solar energy credits.
+"Everyone is their own central bank." 
+
+Personal currencies act as both a reputation system and a way to trade
+and allocate resources.
+
+- Microcurrencies?
+- Nanocurrencies?
+
+- "Why You Should Be Able to Make Your Own Individualized, Digital
+  Nano-Currency"
+  https://mags.acm.org/communications/august_2023/MobilePagedArticle.action?articleId=1897744#articleId1897744 
+
+ 
 
 ---
 
-```
-EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
+# Segue to PromiseGrid
+
+- It's looking like PG uses a double auction mechanism to trade personal currencies.
+- Relative value of personal currencies is determined by the double auction.
+- Reputation is built by fulfilling promises.
+- Reputation is relative -- equivalent to the value of the personal currency. 
+
+---
+

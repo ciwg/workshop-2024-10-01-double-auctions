@@ -1,4 +1,4 @@
-``` 
+  
 File: /home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
 ```markdown
 # Double Auctions: An Introduction
@@ -212,13 +212,6 @@ The matching engine now executes a trade between the buyer (Bob) and the seller 
 
 ---
 
-# Sidebar: Currency Exchange Booths
-
-- When you go to the currency exchange booth at the airport, you are using a **market order**, paying the spread.
-- The booth makes their income from the spread.
-
----
-
 # How Double Auctions Are Used in Currency Exchange Trades
 
 There is no difference between trading currencies and trading other assets in a double auction. When trading two currencies, we choose one currency to be our "asset" and the other currency to be what we're using for our unit of exchange.
@@ -311,6 +304,30 @@ In most markets, **anyone can be a Market Maker**:
 
 ---
 
+# Sidebar: Currency Exchange Booths
+
+- When you go to the currency exchange booth at the airport, you are using a **market order**, paying the spread.
+- The booth makes their income from the spread.
+- The booth acts as a **market maker**.
+
+---
+
+# Example: Airport Currency Exchange
+
+Let's look at an order book for a USD/MXN (US Dollar/Mexican Peso) exchange at an airport booth. The exchange rate is set to 19.69 with a 0.10 spread.
+
+| Trader     | Quantity USD  | Bid MXN | Ask MXN |
+|------------|---------------|---------|---------|
+| AirportBooth | 1000          | 19.69   |         |
+| AirportBooth | 1000          |         | 19.79   |
+
+- The booth is both the buyer and seller (market maker).
+- If you buy MXN from the booth, you pay 19.79 MXN/USD.
+- If you sell MXN to the booth, you get 19.69 MXN/USD.
+- The booth's profit is the spread (0.10 MXN per USD).
+
+---
+
 # How Double Auctions Work in Peer-to-Peer Markets
 
 - **Decentralized Markets**:
@@ -351,4 +368,3 @@ In most markets, **anyone can be a Market Maker**:
 EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
 ```
 EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
-```

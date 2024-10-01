@@ -103,14 +103,14 @@ Buyers and sellers record each other's bids and asks in an **order book**. This 
 
 Example of a simplified order book:
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 100      |      | 6.50  |
-  | 100      | 5.00 |       |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 100          |         | 6.50    |
+  | 100          | 5.00    |         |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
 ---
 
@@ -120,14 +120,14 @@ The bid-ask spread is the difference between the highest price a buyer is willin
 
 Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 100      |      | 6.50  |
-  | 100      | 5.00 |       |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 100          |         | 6.50    |
+  | 100          | 5.00    |         |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
 ---
 
@@ -141,22 +141,22 @@ In an electronic trading system, the **matching engine** is a component that mat
 
 Here is our starting order book -- the bid-ask spread is $4.50 (9.00 - 4.50), so no trades are happening:
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
 A buyer submits a bid for 100 units of XYZ at $5 each. The bid-ask spread is now $4 (9.00 - 5.00), still no trade:
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 100      | 5.00 |       |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 100          | 5.00    |         |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
 ---
 
@@ -164,14 +164,14 @@ A buyer submits a bid for 100 units of XYZ at $5 each. The bid-ask spread is now
 
 A seller submits an ask for 50 units of XYZ at $6.50 each. The bid-ask spread is now $1.50, still no trade:
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 50       |      | 6.50  |
-  | 100      | 5.00 |       |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 50           |         | 6.50    |
+  | 100          | 5.00    |         |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
 ---
 
@@ -179,15 +179,15 @@ A seller submits an ask for 50 units of XYZ at $6.50 each. The bid-ask spread is
 
 Another seller submits an ask for 100 units of XYZ at $5 each. The matching engine notices that the bid-ask spread is now $0:
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 50       |      | 6.50  |
-  | 100      |      | 5.00  |
-  | 50       | 5.00 |       |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 50           |         | 6.50    |
+  | 100          |         | 5.00    |
+  | 100          | 5.00    |         |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
 ---
 
@@ -195,23 +195,26 @@ Another seller submits an ask for 100 units of XYZ at $5 each. The matching engi
 
 The matching engine now executes a trade between the buyer and the seller at $5 each for 50 units of XYZ, removing those 50 units from the order book. The remaining `ASK 50 @5.00` remain in the book, because no more bid orders match:
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 50       |      | 6.50  |
-  | 50       |      | 5.00  |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 50           |         | 6.50    |
+  | 50           |         | 5.00    |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
 ---
 
 # How Double Auctions Are Used in Currency Exchange Trades
 
-- **Currency Exchanges**:
-  - Double auctions can facilitate the trading of various currencies.
-  - Participants submit bids and asks in different currencies, enabling efficient currency exchange through transparent and competitive pricing.
-  - Example: Traders exchanging USD for EUR or other fiat or cryptocurrencies.
+There is no difference between trading currencies and trading other assets in a double auction. When trading two currencies, we choose one currency to be our "asset" and the other currency to be what we're using for "money".  
+
+For example, if we want to buy 100 EUR by spending USD, and we think that the Euro is worth 1.10 USD, we submit a bid to buy 100 EUR at 1.10 USD each:
+
+```
+BID 100 EUR @1.10 USD
+```
 
 ---
 

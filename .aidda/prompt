@@ -17,15 +17,4 @@ Out: README.md
 
 revise the slide deck:
 
-Reformat all of the order book examples by renaming the Quantity
-column to "Quantity XYZ" and renaming Bid and Ask columns to "Bid USD"
-and "Ask USD".  Here is an example of the revised format:
-
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 100          |         | 6.50    |
-  | 100          | 5.00    |         |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+add a slide showing a currency exchange order book.

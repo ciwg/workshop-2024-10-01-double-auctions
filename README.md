@@ -14,7 +14,7 @@ A double auction is a market mechanism where buyers and sellers declare orders t
 
 ---
 
-# Why double auctions matter
+# Why Double Auctions Matter
 
 Double auctions perform **price discovery** -- the process of deciding a reasonable value for an asset.
 
@@ -63,7 +63,7 @@ A limit order is an order to buy or sell an asset at a specified price or better
 
 ---
 
-# Limit Order examples
+# Limit Order Examples
 
 - **Bid Order**:
   - A proposal to buy a certain quantity of an asset at a specified price.
@@ -106,14 +106,14 @@ Buyers and sellers record each other's bids and asks in an **order book**. This 
 
 Example of a simplified order book:
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 100          |         | 6.50    |
-  | 100          | 5.00    |         |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Bob    | 100          |         | 6.50    |
+  | Alice  | 100          | 5.00    |         |
+  | Carol  | 200          | 4.50    |         |
+  | Bob    | 150          | 4.00    |         |
 
 ---
 
@@ -123,14 +123,14 @@ The bid-ask spread is the difference between the highest price a buyer is willin
 
 Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 100          |         | 6.50    |
-  | 100          | 5.00    |         |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Bob    | 100          |         | 6.50    |
+  | Alice  | 100          | 5.00    |         |
+  | Carol  | 200          | 4.50    |         |
+  | Bob    | 150          | 4.00    |         |
 
 ---
 
@@ -144,74 +144,74 @@ In an electronic trading system, the **matching engine** is a component that mat
 
 Here is our starting order book -- the bid-ask spread is $4.50 (9.00 - 4.50), so no trades are happening:
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Carol  | 200          | 4.50    |         |
+  | Alice  | 150          | 4.00    |         |
 
-A buyer submits a bid for 100 units of XYZ at $5 each. The bid-ask spread is now $4 (9.00 - 5.00), still no trade:
+A buyer (Bob) submits a bid for 100 units of XYZ at $5 each. The bid-ask spread is now $4 (9.00 - 5.00), still no trade:
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 100          | 5.00    |         |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Bob    | 100          | 5.00    |         |
+  | Carol  | 200          | 4.50    |         |
+  | Alice  | 150          | 4.00    |         |
 
 ---
 
 # Matching Engine in Action: Step 2
 
-A seller submits an ask for 50 units of XYZ at $6.50 each. The bid-ask spread is now $1.50, still no trade:
+A seller (Alice) submits an ask for 50 units of XYZ at $6.50 each. The bid-ask spread is now $1.50, still no trade:
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 50           |         | 6.50    |
-  | 100          | 5.00    |         |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Alice  | 50           |         | 6.50    |
+  | Bob    | 100          | 5.00    |         |
+  | Carol  | 200          | 4.50    |         |
+  | Alice  | 150          | 4.00    |         |
 
 ---
 
 # Matching Engine in Action: Step 3
 
-Another seller submits an ask for 100 units of XYZ at $5 each. The matching engine notices that the bid-ask spread is now $0:
+Another seller (Carol) submits an ask for 100 units of XYZ at $5 each. The matching engine notices that the bid-ask spread is now $0:
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 50           |         | 6.50    |
-  | 100          |         | 5.00    |
-  | 100          | 5.00    |         |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Alice  | 50           |         | 6.50    |
+  | Carol  | 100          |         | 5.00    |
+  | Bob    | 100          | 5.00    |         |
+  | Carol  | 200          | 4.50    |         |
+  | Alice  | 150          | 4.00    |         |
 
 ---
 
 # Matching Engine in Action: Step 4
 
-The matching engine now executes a trade between the buyer and the seller at $5 each for 50 units of XYZ, removing those 50 units from the order book. The remaining `ASK 50 @5.00` remain in the book, because no more bid orders match:
+The matching engine now executes a trade between the buyer (Bob) and the seller (Carol) at $5 each for 50 units of XYZ, removing those 50 units from the order book. The remaining `ASK 50 @5.00` remain in the book, because no more bid orders match:
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 50           |         | 6.50    |
-  | 50           |         | 5.00    |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Alice  | 50           |         | 6.50    |
+  | Carol  | 50           |         | 5.00    |
+  | Carol  | 200          | 4.50    |         |
+  | Alice  | 150          | 4.00    |         |
 
 ---
 
 # How Double Auctions Are Used in Currency Exchange Trades
 
-There is no difference between trading currencies and trading other assets in a double auction. When trading two currencies, we choose one currency to be our "asset" and the other currency to be what we're using for "money".  
+There is no difference between trading currencies and trading other assets in a double auction. When trading two currencies, we choose one currency to be our "asset" and the other currency to be what we're using for our unit of exchange.
 
 For example, if we want to buy 100 EUR by spending USD, and we think that the Euro is worth 1.10 USD, we submit a bid to buy 100 EUR at 1.10 USD each:
 
@@ -225,16 +225,16 @@ BID 100 EUR @1.10 USD
 
 This is what an order book might look like for a currency exchange. Here traders are buying and selling euros (EUR) using US dollars (USD):
 
-  | Quantity EUR | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 1000         |         | 1.30    |
-  | 2000         |         | 1.25    |
-  | 1500         |         | 1.20    |
-  | 2000         | 1.10    |         |
-  | 3000         | 1.05    |         |
-  | 4000         | 1.00    |         |
+  | Trader | Quantity EUR | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 1000         |         | 1.30    |
+  | Bob    | 2000         |         | 1.25    |
+  | Alice  | 1500         |         | 1.20    |
+  | Alice  | 2000         | 1.10    |         |
+  | Carol  | 3000         | 1.05    |         |
+  | Bob    | 4000         | 1.00    |         |
 
-## Discussion:  Which Currency is worth more?
+## Discussion:  Which Currency is Worth More?
 
 In the above order book, which currency has higher value per unit, the USD or the EUR?
 
@@ -269,15 +269,14 @@ Here is an order book. Consider the following questions:
 1. What price will someone buy at if they submit a market bid order?
 2. What price will someone sell at if they submit a market ask order?
 
-  | Quantity XYZ | Bid USD | Ask USD |
-  |--------------|---------|---------|
-  | 50           |         | 10.00   |
-  | 20           |         | 9.00    |
-  | 100          |         | 6.50    |
-  | 100          | 5.00    |         |
-  | 200          | 4.50    |         |
-  | 150          | 4.00    |         |
-
+  | Trader | Quantity XYZ | Bid USD | Ask USD |
+  |--------|--------------|---------|---------|
+  | Carol  | 50           |         | 10.00   |
+  | Alice  | 20           |         | 9.00    |
+  | Bob    | 100          |         | 6.50    |
+  | Carol  | 100          | 5.00    |         |
+  | Bob    | 200          | 4.50    |         |
+  | Alice  | 150          | 4.00    |         |
 
 Retail traders (consumers) often use market orders, unaware that they
 are essentially paying the bid-ask spread to the person on the other

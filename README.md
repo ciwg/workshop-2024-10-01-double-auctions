@@ -278,9 +278,7 @@ Here is an order book. Consider the following questions:
   | Bob    | 200          | 4.50    |         |
   | Alice  | 150          | 4.00    |         |
 
-Retail traders (consumers) often use market orders, unaware that they
-are essentially paying the bid-ask spread to the person on the other
-side of the trade.
+Retail traders (consumers) often use market orders, unaware that they are essentially paying the bid-ask spread to the person on the other side of the trade.
 
 ---
 
@@ -313,6 +311,13 @@ In most markets, **anyone can be a Market Maker**:
   - Reduced Transaction Costs: Elimination of intermediaries reduces costs for participants.
   - Enhanced Privacy and Security: Use of cryptographic protocols ensures privacy and security.
   
+---
+
+# Sidebar: Currency Exchange Booths
+
+- When you go to the currency exchange booth at the airport, you are using a **market order**, paying the spread.
+- The booth makes their income from the spread.
+
 ---
 
 # Implementing Double Auctions in a Decentralized System

@@ -21,4 +21,10 @@ add a sidebar slide mentioning that when you go to the currency
 exchange booth at the airport, you are using a market order, paying
 the spread.  the booth makes their income from the spread.  
 
+the booth is acting as a market maker.
+
+add a USD/MXN order book table to the slide, showing one bid order and
+one ask order, with the booth as the Trader in both orders.  Set the
+exchange rate to 19.69 with a 0.10 spread.
+
 

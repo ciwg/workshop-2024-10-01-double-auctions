@@ -116,6 +116,21 @@ Example of a simplified order book:
 
 ---
 
+# Currency Exchange Order Book
+
+This is what an order book might look like for a currency exchange. Here traders are buying and selling euros (EUR) using US dollars (USD):
+
+  | Quantity EUR | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 1000         |         | 1.30    |
+  | 2000         |         | 1.25    |
+  | 1500         |         | 1.20    |
+  | 2000         | 1.10    |         |
+  | 3000         | 1.05    |         |
+  | 4000         | 1.00    |         |
+
+---
+
 # Bid-Ask Spread
 
 The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
@@ -210,10 +225,13 @@ The matching engine now executes a trade between the buyer and the seller at $5 
 
 # How Double Auctions Are Used in Currency Exchange Trades
 
-- **Currency Exchanges**:
-  - Double auctions can facilitate the trading of various currencies.
-  - Participants submit bids and asks in different currencies, enabling efficient currency exchange through transparent and competitive pricing.
-  - Example: Traders exchanging USD for EUR or other fiat or cryptocurrencies.
+There is no difference between trading currencies and trading other assets in a double auction. When trading two currencies, we choose one currency to be our "asset" and the other currency to be what we're using for "money".  
+
+For example, if we want to buy 100 EUR by spending USD, and we think that the Euro is worth 1.10 USD, we submit a bid to buy 100 EUR at 1.10 USD each:
+
+```
+BID 100 EUR @1.10 USD
+```
 
 ---
 

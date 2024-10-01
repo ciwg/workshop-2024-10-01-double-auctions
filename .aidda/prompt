@@ -17,4 +17,7 @@ Out: README.md
 
 revise the slide deck:
 
-add a slide showing a currency exchange order book.
+add a slide describing how market makers make income from the bid-ask
+spread, and mention how anyone can be a merket maker as long as the
+spread is wide enough to cover costs and provide a profit.
+

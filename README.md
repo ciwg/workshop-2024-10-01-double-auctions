@@ -218,6 +218,25 @@ BID 100 EUR @1.10 USD
 
 ---
 
+# Currency Exchange Order Book
+
+This is what an order book might look like for a currency exchange. Here traders are buying and selling euros (EUR) using US dollars (USD):
+
+  | Quantity EUR | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 1000         |         | 1.30    |
+  | 2000         |         | 1.25    |
+  | 1500         |         | 1.20    |
+  | 2000         | 1.10    |         |
+  | 3000         | 1.05    |         |
+  | 4000         | 1.00    |         |
+
+## Discussion:  Which Currency is worth more?
+
+In the above order book, which currency has higher value per unit, the USD or the EUR?
+
+---
+
 # How Double Auctions Work in Peer-to-Peer Markets
 
 - **Decentralized Markets**:

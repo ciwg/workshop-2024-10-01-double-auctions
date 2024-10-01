@@ -17,17 +17,17 @@ Out: README.md
 
 revise the slide deck:
 
-Reformat all of the order book examples by moving the Price data into
-a Bid or Ask column, and removing the Asset and Type columns.  Here is an example
+Reformat all of the order book examples by adding an Asset column and
+renaming Bid and Ask columns to "Bid USD" and "Ask USD".  Here is an example
 of the revised format:
 
-  | Quantity | Bid  | Ask   |
-  |----------|------|-------|
-  | 50       |      | 10.00 |
-  | 20       |      | 9.00  |
-  | 100      |      | 6.50  |
-  | 100      | 5.00 |       |
-  | 200      | 4.50 |       |
-  | 150      | 4.00 |       |
+  | Asset | Quantity | Bid USD | Ask USD |
+  |-------|----------|---------|---------|
+  | XYZ   | 50       |         | 10.00   |
+  | XYZ   | 20       |         | 9.00    |
+  | XYZ   | 100      |         | 6.50    |
+  | XYZ   | 100      | 5.00    |         |
+  | XYZ   | 200      | 4.50    |         |
+  | XYZ   | 150      | 4.00    |         |
 
 

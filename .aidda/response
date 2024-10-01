@@ -116,6 +116,25 @@ Example of a simplified order book:
 
 ---
 
+# Discussion Questions: Understanding the Order Book
+
+Here is a detailed look at an order book. Consider the following questions:
+
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 100          |         | 6.50    |
+  | 100          | 5.00    |         |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
+
+## Discussion Questions:
+1. What price will someone pay if they submit a market bid order?
+2. What price will someone sell at if they submit a market ask order?
+
+---
+
 # Bid-Ask Spread
 
 The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
@@ -130,25 +149,6 @@ Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
   | 100          | 5.00    |         |
   | 200          | 4.50    |         |
   | 150          | 4.00    |         |
-
----
-
-# Market Makers: Income from Bid-Ask Spread
-
-Market makers are participants that provide liquidity to the market by posting bid and ask prices.
-
-- **Income from Bid-Ask Spread**:
-  - Market makers buy at the bid price and sell at the ask price.
-  - The difference (spread) is their profit.
-  
-  Example: 
-  - Buy 100 units at $5 each (total $500).
-  - Sell 100 units at $6 each (total $600).
-  - Profit: $100 ($600 - $500).
-
-- **Anyone can be a Market Maker**:
-  - As long as the spread is wide enough to cover costs and provide a profit.
-  - Costs include transaction fees, risk of price movement, and holding costs.
 
 ---
 
@@ -289,6 +289,25 @@ Retail traders (consumers) often use market orders, not knowing that they might 
   - Using a market order to sell will execute at $5.00.
 
 This difference can lead to higher costs or lower profits for retail traders who might not be aware of these nuances.
+
+---
+
+# Market Makers: Income from Bid-Ask Spread
+
+Market makers are participants who place limit orders, setting the inside bid and ask prices.
+
+- **Income from Bid-Ask Spread**:
+  - Market makers buy at the bid price and sell at the ask price.
+  - The difference (spread) is their profit.
+  
+  Example: 
+  - Buy 100 units at $5 each (total $500).
+  - Sell 100 units at $6 each (total $600).
+  - Profit: $100 ($600 - $500).
+
+- In most markets, **anyone can be a Market Maker**:
+  - As long as the spread is wide enough to cover costs and provide a profit.
+  - Costs include transaction fees, risk of price movement, and holding costs.
 
 ---
 

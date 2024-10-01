@@ -27,9 +27,9 @@ Electronic double auctions are a modern global forum. They communicate the need 
 A government's ability to function is ultimately limited by what the bond market (a double auction) is willing to lend to the government's treasury.
 
 Bond traders lend money to a government by buying government bonds. For example:
-- The US Treasury might wish to sell a bond that is worth $1000 in 10 years.  
-- The US Treasury might try to sell this bond for $900 today.
-- Whether the sale is successful depends on whether anyone is willing to buy the bond for $900 and accept the risk that the government might not repay the bond 10 years from now.
+- The US Treasury might wish to sell a bond now with a promise to buy it back for $1000 in 10 years.  
+- They might try to sell this bond for $900 today.
+- Whether the sale is successful depends on whether anyone is willing to buy the bond for $900 and accept the risk that the government might not fulfill the promise 10 years from now.
 
 _"You mean to tell me that the success of the program and my reelection hinges on the Federal Reserve and a bunch of &#^%@ bond traders?" -- Bill Clinton_
 
@@ -51,22 +51,25 @@ Double auctions are based on **limit orders**.
 
 A limit order is an order to buy or sell an asset at a specified price or better.
 
-- **Buy Limit Order**: Sets the maximum price at which you're willing to buy.
-  - Also known as a "bid" or "buy"
-  - We'll use "bid" in this presentation.
-- **Sell Limit Order**: Sets the minimum price at which you're willing to sell.
-  - Also known as an "ask," "offer," or "sell"
-  - We'll use "ask" in this presentation.
+**Buy Limit Order**: Sets the maximum price at which you're willing to buy.
+- "I'll buy that car from you for $5000."
+- Also known as a "bid" or "buy"
+- We'll use "bid" in this presentation.
+
+**Sell Limit Order**: Sets the minimum price at which you're willing to sell.
+- "I'll sell that car to you for $6000."
+- Also known as an "ask," "offer," or "sell"
+- We'll use "ask" in this presentation.
 
 ---
 
 # Limit Order examples
 
 - **Bid Order**:
-  - A proposal to buy a certain amount of an asset at a specified price.
+  - A proposal to buy a certain quantity of an asset at a specified price.
   - Example: Buy 100 units at $5 each.
 - **Ask Order**:
-  - A proposal to sell a certain amount of an asset at a specified price.
+  - A proposal to sell a certain quantity of an asset at a specified price.
   - Example: Sell 100 units at $6 each.
 
 ---
@@ -86,13 +89,13 @@ BID 100 XYZ @5.00 USD
 
 # Example of an Ask Order
 
-**I promise to sell 50 units of XYZ at $10 each.**
-- This means you are offering to sell a total of 50 units of XYZ for $10 each, expecting a total return of $500 if your ask is accepted.
+**I promise to sell 100 units of XYZ at $6.50 each.**
+- This means you are offering to sell a total of 100 units of XYZ for $6.50 each, expecting a total return of $650 if your ask is accepted.
 
 In shorthand:
 
 ```
-ASK 50 XYZ @10.00 USD
+ASK 100 XYZ @6.50 USD
 ```
 
 ---
@@ -246,45 +249,56 @@ A market order is an order to buy or sell an asset immediately at the best avail
   - Guaranteed Order Fulfillment: As long as there are willing buyers/sellers in the market.
   - No Price Guarantee: You get the next available price, which might fluctuate.
 
-- **Example**:
-  - If a buyer submits a market order to buy 100 units of XYZ, the order will be matched with any available sell orders (asks) on the order book. If the lowest ask price is $5.50, the market order will execute at that price.
+## Example:
+  - If a buyer submits a market order to buy 100 units of XYZ, the order will be matched with any available sell orders (asks) on the order book. If the lowest ask price is $6.50, the market order will execute at that price.
 
 ```
-BID 100 XYZ @MARKET
+BID 100 XYZ @MARKET  
+```
+...executes as:
+
+```
+BID 100 XYZ @6.50 USD
 ```
 
 ---
 
-# Retail Traders and Market Orders
+# Market Orders and the Order Book
 
-Retail traders (consumers) often use market orders, not knowing that they might be paying a higher price than using limit orders because:
+Here is an order book. Consider the following questions:
+1. What price will someone buy at if they submit a market bid order?
+2. What price will someone sell at if they submit a market ask order?
 
-- A buy order will get filled at the **ask** price, which is the lowest price a seller is willing to accept.
-- A sell order will get filled at the **bid** price, which is the highest price a buyer is willing to pay.
+  | Quantity XYZ | Bid USD | Ask USD |
+  |--------------|---------|---------|
+  | 50           |         | 10.00   |
+  | 20           |         | 9.00    |
+  | 100          |         | 6.50    |
+  | 100          | 5.00    |         |
+  | 200          | 4.50    |         |
+  | 150          | 4.00    |         |
 
-**Example**:
-- If the order book has a bid price of $5.00 and an ask price of $5.50:
-  - Using a market order to buy will execute at $5.50.
-  - Using a market order to sell will execute at $5.00.
 
-This difference can lead to higher costs or lower profits for retail traders who might not be aware of these nuances.
+Retail traders (consumers) often use market orders, unaware that they
+are essentially paying the bid-ask spread to the person on the other
+side of the trade.
 
 ---
 
 # Market Makers: Income from Bid-Ask Spread
 
-Market makers are participants who place limit orders, setting the inside bid and ask prices.
+Market makers are participants who place limit orders at or inside the best bid and ask prices.
 
 - **Income from Bid-Ask Spread**:
   - Market makers buy at the bid price and sell at the ask price.
   - The difference (spread) is their profit.
   
-  Example: 
-  - Buy 100 units at $5 each (total $500).
-  - Sell 100 units at $6 each (total $600).
-  - Profit: $100 ($600 - $500).
+Example: 
+- Buy 100 units at $5 each (total $500).
+- Sell 100 units at $6.50 each (total $650).
+- Profit: $150 ($650 - $500).
 
-- In most markets, **anyone can be a Market Maker**:
+In most markets, **anyone can be a Market Maker**:
   - As long as the spread is wide enough to cover costs and provide a profit.
   - Costs include transaction fees, risk of price movement, and holding costs.
 
@@ -326,3 +340,5 @@ Market makers are participants who place limit orders, setting the inside bid an
 
 ---
 
+```
+EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md

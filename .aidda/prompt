@@ -17,8 +17,6 @@ Out: README.md
 
 revise the slide deck:
 
-add a slide showing an order book, and ask two discussion questions
-about it:
-- what price will someone pay if they submit a market bid order?
-- what price will someone sell at if they submit a market ask order?
+For each order book, add a Trader column.  Name the traders Alice,
+Bob, Carol, etc.
 

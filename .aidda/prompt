@@ -18,4 +18,8 @@ Out: README.md
 revise the slide deck:
 
 add a slide describing market orders
+- mention that retail traders (consumers) often use market orders, not
+  knowing that they are paying a higher price than if they used limit
+  orders, because a buy order will get filled at the ask, and a sell
+  order will get filled at the bid
 

@@ -39,8 +39,8 @@ _"You mean to tell me that the success of the program and my reelection hinges o
 
 # Key Features of Double Auctions
 
-- **Buyers** submit orders to buy an asset
-- **Sellers** submit orders to sell an asset
+- **Buyers** submit orders to buy an asset.
+- **Sellers** submit orders to sell an asset.
 - A **Matching** process pairs buy and sell orders to **execute** trades.
 
 ---
@@ -55,7 +55,7 @@ A limit order is an order to buy or sell an asset at a specified price or better
   - Also known as a "bid" or "buy"
   - We'll use "bid" in this presentation.
 - **Sell Limit Order**: Sets the minimum price at which you're willing to sell.
-  - Also known as an "ask", "offer", or "sell"
+  - Also known as an "ask," "offer," or "sell"
   - We'll use "ask" in this presentation.
 
 ---
@@ -146,7 +146,7 @@ Market makers are participants that provide liquidity to the market by posting b
 
 - **Anyone can be a Market Maker**:
   - As long as the spread is wide enough to cover costs and provide a profit.
-  - Costs includes transaction fees, risk of price movement, and holding costs.
+  - Costs include transaction fees, risk of price movement, and holding costs.
 
 ---
 
@@ -253,6 +253,24 @@ This is what an order book might look like for a currency exchange. Here traders
 ## Discussion:  Which Currency is worth more?
 
 In the above order book, which currency has higher value per unit, the USD or the EUR?
+
+---
+
+# Market Orders
+
+A market order is an order to buy or sell an asset immediately at the best available current price.
+
+- **Characteristics**:
+  - Immediate Execution: No waiting for a matching order at a specific price.
+  - Guaranteed Order Fulfillment: As long as there are willing buyers/sellers in the market.
+  - No Price Guarantee: You get the next available price, which might fluctuate.
+
+- **Example**:
+  - If a buyer submits a market order to buy 100 units of XYZ, the order will be matched with any available sell orders (asks) on the order book. If the lowest ask price is $5.50, the market order will execute at that price.
+
+```
+BID 100 XYZ @MARKET
+```
 
 ---
 

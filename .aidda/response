@@ -40,8 +40,8 @@ _"You mean to tell me that the success of the program and my reelection hinges o
 
 # Key Features of Double Auctions
 
-- **Buyers** submit orders to buy an asset
-- **Sellers** submit orders to sell an asset
+- **Buyers** submit orders to buy an asset.
+- **Sellers** submit orders to sell an asset.
 - A **Matching** process pairs buy and sell orders to **execute** trades.
 
 ---
@@ -53,10 +53,10 @@ Double auctions are based on **limit orders**.
 A limit order is an order to buy or sell an asset at a specified price or better.
 
 - **Buy Limit Order**: Sets the maximum price at which you're willing to buy.
-  - Also known as a "bid" or "buy"
+  - Also known as a "bid" or "buy."
   - We'll use "bid" in this presentation.
 - **Sell Limit Order**: Sets the minimum price at which you're willing to sell.
-  - Also known as an "ask", "offer", or "sell"
+  - Also known as an "ask," "offer," or "sell."
   - We'll use "ask" in this presentation.
 
 ---
@@ -132,9 +132,9 @@ Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
 
 ---
 
-# Market Makers & Income from Bid-Ask Spread
+# Market Makers: Income from Bid-Ask Spread
 
-Market makers are participants that provide liquidity to the market by continuously posting bid and ask prices.
+Market makers are participants that provide liquidity to the market by posting bid and ask prices.
 
 - **Income from Bid-Ask Spread**:
   - Market makers buy at the bid price and sell at the ask price.
@@ -147,7 +147,7 @@ Market makers are participants that provide liquidity to the market by continuou
 
 - **Anyone can be a Market Maker**:
   - As long as the spread is wide enough to cover costs and provide a profit.
-  - This includes transaction fees, risk of price movement, and holding costs.
+  - Costs include transaction fees, risk of price movement, and holding costs.
 
 ---
 
@@ -257,6 +257,24 @@ In the above order book, which currency has higher value per unit, the USD or th
 
 ---
 
+# Market Orders
+
+A market order is an order to buy or sell an asset immediately at the best available current price.
+
+- **Characteristics**:
+  - Immediate Execution: No waiting for a matching order at a specific price.
+  - Guaranteed Order Fulfillment: As long as there are willing buyers/sellers in the market.
+  - No Price Guarantee: You get the next available price, which might fluctuate.
+
+- **Example**:
+  - If a buyer submits a market order to buy 100 units of XYZ, the order will be matched with any available sell orders (asks) on the order book. If the lowest ask price is $5.50, the market order will execute at that price.
+
+  ```
+  MARKET BUY 100 XYZ
+  ```
+
+---
+
 # How Double Auctions Work in Peer-to-Peer Markets
 
 - **Decentralized Markets**:
@@ -292,6 +310,7 @@ In the above order book, which currency has higher value per unit, the USD or th
   - Example: Local communities trading solar energy credits.
 
 ---
+
 ```
 EOF_/home/stevegt/lab/cswg/workshop-2024-10-01-double-auctions/README.md
 ```

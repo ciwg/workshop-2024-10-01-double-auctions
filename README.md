@@ -131,25 +131,6 @@ Example: In this order book, the XYZ bid-ask spread is $1.50 (6.50 - 5.00).
 
 ---
 
-# Market Makers: Income from Bid-Ask Spread
-
-Market makers are participants that provide liquidity to the market by posting bid and ask prices.
-
-- **Income from Bid-Ask Spread**:
-  - Market makers buy at the bid price and sell at the ask price.
-  - The difference (spread) is their profit.
-  
-  Example: 
-  - Buy 100 units at $5 each (total $500).
-  - Sell 100 units at $6 each (total $600).
-  - Profit: $100 ($600 - $500).
-
-- **Anyone can be a Market Maker**:
-  - As long as the spread is wide enough to cover costs and provide a profit.
-  - Costs include transaction fees, risk of price movement, and holding costs.
-
----
-
 # Matching Engine
 
 In an electronic trading system, the **matching engine** is a component that matches buy and sell orders from the order book.  
@@ -271,6 +252,41 @@ A market order is an order to buy or sell an asset immediately at the best avail
 ```
 BID 100 XYZ @MARKET
 ```
+
+---
+
+# Retail Traders and Market Orders
+
+Retail traders (consumers) often use market orders, not knowing that they might be paying a higher price than using limit orders because:
+
+- A buy order will get filled at the **ask** price, which is the lowest price a seller is willing to accept.
+- A sell order will get filled at the **bid** price, which is the highest price a buyer is willing to pay.
+
+**Example**:
+- If the order book has a bid price of $5.00 and an ask price of $5.50:
+  - Using a market order to buy will execute at $5.50.
+  - Using a market order to sell will execute at $5.00.
+
+This difference can lead to higher costs or lower profits for retail traders who might not be aware of these nuances.
+
+---
+
+# Market Makers: Income from Bid-Ask Spread
+
+Market makers are participants who place limit orders, setting the inside bid and ask prices.
+
+- **Income from Bid-Ask Spread**:
+  - Market makers buy at the bid price and sell at the ask price.
+  - The difference (spread) is their profit.
+  
+  Example: 
+  - Buy 100 units at $5 each (total $500).
+  - Sell 100 units at $6 each (total $600).
+  - Profit: $100 ($600 - $500).
+
+- In most markets, **anyone can be a Market Maker**:
+  - As long as the spread is wide enough to cover costs and provide a profit.
+  - Costs include transaction fees, risk of price movement, and holding costs.
 
 ---
 

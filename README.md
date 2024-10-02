@@ -20,6 +20,13 @@ Double auctions perform **price discovery** -- the process of deciding a reasona
 
 Electronic double auctions are a modern global forum. They communicate the need and availability of goods and services worldwide. They can do this across national borders, languages, and cultures, often reallocating resources within milliseconds of an event.
 
+See "Wisdom of Crowds" by James Surowiecki for more on how markets can be more timely and accurate than single experts.
+
+Also see:
+- prediction markets, which are essentially double auctions for predicting future events.
+- "The Future of Work" by Thomas Malone for more on how decentralized systems can be more efficient than centralized ones.
+- Todd Proebsting's work at Microsoft Research on prediction markets.
+
 ---
 
 # Double Auctions Govern Governments
@@ -157,7 +164,7 @@ A buyer (Bob) submits a bid for 100 units of XYZ at $5 each. The bid-ask spread 
   |--------|--------------|---------|---------|
   | Carol  | 50           |         | 10.00   |
   | Alice  | 20           |         | 9.00    |
-  | Bob    | 100          | 5.00    |         |
+  | Bob    | 50          | 5.00    |         |
   | Carol  | 200          | 4.50    |         |
   | Alice  | 150          | 4.00    |         |
 
@@ -172,7 +179,7 @@ A seller (Alice) submits an ask for 50 units of XYZ at $6.50 each. The bid-ask s
   | Carol  | 50           |         | 10.00   |
   | Alice  | 20           |         | 9.00    |
   | Alice  | 50           |         | 6.50    |
-  | Bob    | 100          | 5.00    |         |
+  | Bob    | 50           | 5.00    |         |
   | Carol  | 200          | 4.50    |         |
   | Alice  | 150          | 4.00    |         |
 
@@ -188,7 +195,7 @@ Another seller (Carol) submits an ask for 100 units of XYZ at $5 each. The match
   | Alice  | 20           |         | 9.00    |
   | Alice  | 50           |         | 6.50    |
   | Carol  | 100          |         | 5.00    |
-  | Bob    | 100          | 5.00    |         |
+  | Bob    | 50          | 5.00    |         |
   | Carol  | 200          | 4.50    |         |
   | Alice  | 150          | 4.00    |         |
 
@@ -223,7 +230,7 @@ BID 100 EUR @1.10 USD
 
 # Currency Exchange Order Book
 
-This is what an order book might look like for a currency exchange. Here traders are buying and selling euros (EUR) using US dollars (USD):
+This is what an order book might look like for a currency exchange. Here traders are buying and selling euros (EUR/USD) using US dollars (USD):
 
   | Trader | Quantity EUR | Bid USD | Ask USD |
   |--------|--------------|---------|---------|
@@ -289,6 +296,7 @@ Market makers are participants who place limit orders at or inside the best bid 
 - **Income from Bid-Ask Spread**:
   - Market makers buy at the bid price and sell at the ask price.
   - The difference (spread) is their profit.
+  - XXX mention risk
   
 Example: 
 - Buy 100 units at $5 each (total $500).
@@ -324,7 +332,11 @@ Let's look at an order book for a USD/MXN (US Dollar/Mexican Peso) exchange at a
 
 # Discussion: 
 
-- How much USD will you be left with if you exchange $1000 USD for MXN, and then exchange the MXN back to USD?
+- How much USD will you be left with if you sell $1000 USD for MXN, and then buy the USD back with the MXN you received?
+
+---
+
+- answer: $980 USD ?
 
 ---
 
